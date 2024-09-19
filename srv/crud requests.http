@@ -1,0 +1,12 @@
+###  submit purchaseorders
+POST http://localhost:4004/browse/PurchDocs
+Content-Type: application/json
+
+{ "PurchDocNum":2124, "Items":[
+    {"PurchDocNum":2124, "purdocitem":10,"material_MaterialNumber":201,"amount":3456,"netAmount": 54635 }
+],"companycode":"3456","totalamount":3456}
+
+
+
+### fetch Material entity 
+GET http://localhost:4004/admin/Materials(201)
