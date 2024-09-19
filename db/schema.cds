@@ -1,7 +1,7 @@
 namespace sap.capire.materialshop;
 using { Currency, managed, cuid } from '@sap/cds/common';
 
-entity Materials : managed {
+entity Materials : managed,additionalInfo {
   key MaterialNumber : Integer;  
   Materialdescription  : localized String(1111); 
   Quantity  : Integer; 
@@ -29,4 +29,10 @@ entity PurchDocItems  {
   material  : Association to Materials;
   amount    : Integer;
   netAmount : Decimal(9,2);
+}
+
+
+aspect additionalInfo{
+  genre: String(100);
+  language:String(200);
 }
