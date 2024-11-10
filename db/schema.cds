@@ -7,6 +7,7 @@ entity Materials : managed {
   Quantity  : Integer; 
   Price  : Decimal(9,2);  
   plant : Association to Plants;
+  // PurchDocs:Association to PurchDocs
 } 
 entity Plants : managed {
   key plantID   : String(4); 
